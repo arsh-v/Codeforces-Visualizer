@@ -1,0 +1,38 @@
+{
+    "manifest_version": 2,
+    "name": "Web scraper",
+    "description": "a Web Scraper!!",
+    "version": "1.0",
+    "permissions": [
+      "tabs",
+      "input",
+      "storage",
+      "alarms",
+      "<all_urls>",
+      "webRequest",
+      "webRequestBlocking"
+    ],
+    "content_scripts": [
+      {
+        "js": [
+          "content.js"
+        ],
+        "matches": [
+          "<all_urls>"
+        ]
+      }
+    ],
+    "background": {
+      "persistent": true,
+      "scripts": ["background.js"]
+    },
+    "browser_action": {
+      "default_popup": "cf.html",
+      "default_title": "A codeforces visualiser chrome extension"
+    },
+    "icons": {
+      "16": "imgs/fast16.png",
+      "48": "imgs/fast48.png",
+      "128": "imgs/fast128.png"
+    }
+  }

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/cf.css">
+    <title>Codeforces Visualiser</title>
+</head>
+
+<body>
+
+    <div class="upperbody">
+        <div class="codeforces">
+            <h1 class="main__heading"><span class="cf1"> Codeforces </span>Visualiser</h1>
+            <a href="./views/analises.html" target="_blank" class="link_page" ><img src="./imgs/analise.png" alt="Analise" width="50" height="50" style="border-radius: 50%;"></a>
+            <div class="subheading">
+                <h2>here u can find some info. of any contestent</h2>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="inputcon">
+        <h3 class="inputhead">find the contestent by there handle name:-</h3>
+        <p class="inputsubhead">Enter the username:-
+            <input type="text" id="handle" class="inputusername" placeholder="username">
+            <button id="find" class="button" >Search</button>
+        </p>
+        <p class="invaliduser"></p>
+        <table class="user_table1" id="user_table1">
+            <tr>
+                <th>Handle name</th>
+                <th>Rank</th>
+                <th>Contribution</th>
+                <th>Current Rating</th>
+                <th>Max Rating</th>
+            </tr>
+            <!-- <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr> -->
+        </table>
+    </div>
+    <div class="userparent">
+        <p class="user1" id="userfind">If you Don't see you name in the List search it by username!! </p>
+    </div>
+    <div>
+        <table class="user_table" id="user_table">
+            <tr>
+                <th>Handle name</th>
+                <th>Rank</th>
+                <th>Contribution</th>
+                <th>Current Rating</th>
+                <th>Max Rating</th>
+            </tr>
+        </table>
+    </div>
+    <table>
+        
+    </table>
+  
+
+    <script src="../scripts/bundle.js"></script>
+
+    <!-- <script>
+        // const tra = document.querySelector('button.button');
+        const x = document.getElementsByTagName('h2');
+        console.log(x.innerHTML);
+        // tra.addEventListener('click', () => {
+        //     const path = document.getElementsByTagName('input').value;
+        //     console.log(path);
+        // })
+        // function myfunction(){
+        //     const path = document.getElementsByTagName('input').value;
+        //     console.log(path);
+        // }
+    </script> -->
+</body>
+
+</html>
