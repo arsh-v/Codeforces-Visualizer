@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/analises.css" media=”screen” />
+    <script src="../lib/chart.min.js"></script>
+    <script src="../lib/jquery-3.6.0.min.js"></script>
+    <title>Codeforces Visualizer</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+        body{
+            text-align: center;
+            justify-content: center;
+            background: whitesmoke;
+
+        }
+        .upperHeadings{
+            
+            border-radius: 5px;
+            margin: 5px;
+            padding: 2px;
+            background: whitesmoke;
+            
+
+        }
+        .heading{
+            text-align: left;
+            background: whitesmoke;
+            justify-content: left;
+            font-size: 40px;
+            position: left;
+            text-decoration: none;
+            font-family: "Open Sans";
+            position: fixed;
+            top: 5px;
+            left: 35px;
+            font-weight: 700;
+            
+        }
+        .headbag{
+            background: red;
+            border-radius: 5px 5px 5px 5px;
+        }
+        .link1{
+            border-radius: 40px;
+            background: whitesmoke;
+            font-size: 40px;
+            position: fixed;
+            right: 120px;
+            text-decoration: none;
+
+        }
+        .link2{
+            text-align: right;
+            /* width: 300px; */
+            border-radius: 40px;
+            background: whitesmoke;
+            font-size: 40px;
+            position: fixed;
+            right: 20px;
+            text-decoration: none;
+
+        }
+        .upper_part{
+            background: whitesmoke;
+            position: fixed;
+            z-index: 10;
+        }
+        .upperInput{
+            width: 70%;
+            height: 60px;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            border: 2px whitesmoke;
+            background: whitesmoke;
+        }
+        .inputHandle{
+            position: relative;
+        }
+        .first_chart{
+            max-width: 100%;
+            max-height:fit-content;
+            justify-items: flex;
+        }
+        .upperCharts{
+            display: inline;
+            max-width: 100%;
+        }
+        .languagechart{
+            text-align: left;
+            max-width: 100%;
+            font-size: 20px;
+            font-weight: 500;
+            padding: 0;
+            margin: 0;
+            position: relative;
+            left: 0%;
+            
+        }
+        .verdictChart1{
+            position: relative;
+            left: 0%;
+            text-align: left;
+            max-width: 100%;
+            font-size: 20px;
+            padding: 0;
+            margin: 0;
+            font-weight: 500;
+            
+        }
+        .languagepeiChart{
+            position: relative;
+            left: 0%;
+            right: 0%;
+            padding: 0;
+            margin: 0;
+
+        }
+
+        .Second_chart{
+            max-width: 100%;
+            max-height: 30%;
+            justify-items: center;
+        }
+
+        .Problem_Rating_chart{
+            font-size: 20px;
+            text-align: left;
+            font-weight: 500;
+
+        }
+        .problemRatingChart{
+            display: block;
+            justify-content: center;
+            margin: 0 5% 0 5%;
+            padding: 10px;
+        }
+
+        .third_chart{
+            max-width: 100%;
+            max-height: fit-content;
+            display: flex;
+        }
+        .Tag_Chart{
+            width: 80%;
+            margin: 40px 0 0 0;
+        }
+        .Tagchart_{
+            padding: 0;
+            margin: 0;
+            position: relative;
+            right: 5%;
+        }
+        .tag___{
+            font-size: 20px;
+            font-weight: 500;
+            margin: 0 0 0 6%;
+        }
+        .Table{
+            max-width: 100%;
+            display: block;
+        }
+
+
+
+        table{
+            max-width: 100%;
+            width: fit-content;
+            max-height: fit-content;
+            border-collapse: collapse;
+            border: 1px solid black;
+            text-align: center;
+        }
+        th,td{
+            width: fit-content;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .user_table{
+            margin: 2% 3% 2% 3%;
+            max-width: 90%;
+            width: 90%;
+            height: 20px;
+            max-height: 100px;
+            align-items: left;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px gray;
+        }
+        .user_table1{
+            margin: 2% 3% 2% 3%;
+            max-width: 90%;
+            width: 90%;
+            height: 20px;
+            max-height: 100px;
+            align-items: left;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px gray;
+        }
+        th{
+            font-size: 20px;
+            font-weight: 500;
+            height: 30px;
+            border-radius: 10px;
+            background: skyblue;
+
+        }
+        td{
+            height: 30px;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+        .others{
+            max-width: 100%;
+            margin: 10px 5% 10px 5%;
+
+        }
+        .Unsolved_problems{
+            border: 1px solid gray;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px gray;
+
+        }
+        .Unsolved_prob{
+            text-align: left;
+            font-size: 20px;
+            font-weight:700;
+            padding: 10px;
+        }
+        .unsolved_count{
+            text-align: left;
+            font-size: 20px;
+            font-weight:700;
+            padding: 10px;
+        }
+        .unsolved_list{
+            
+            text-decoration: none;
+            font-size: 20px;
+
+        }
+        .Handle{
+            justify-content: center;
+            text-align: center;
+            font-size: 20px;
+            width: 60%;
+            height: 35px;
+            background: none;
+            border-radius: 5px;
+            position: relative;
+            left: 20%;
+            border-bottom: 1px solid gray;
+        }
+        .button{
+            width: 15%;
+            height: 38px;
+            font-size: 15px;
+            background: none;
+            border-radius: 5px;
+            position: relative;
+            left: 20%;
+            border-bottom: 1px solid gray;
+        }
+    </style>
+    
+</head>
+<body>
+    <section class="upper_part">
+        <div class="upperHeadings">
+            <nav class="nevigation"></nav>
+                <ul class="heading"> <span class="headbag"> Codeforces </span>Visualizer</ul>
+                <a href="./analises.html" class="link1"><img src="../imgs/home.jpg" alt="HOME" height="80px" width="80px" style="border-radius: 50%;" ></a>
+                <a href="./about.html" class="link2"><img src="../imgs/smt.png" alt="About Us" height="80px" width="80px" style="border-radius: 50%;"></a>
+            </nav>
+            
+        </div>
+    </section>
+    <br><br><br><br><br><br><br>
+    <div class="inputHandle">
+        <div class="upperInput">
+            <input type="text" id="handle" class="Handle" placeholder="Enter Your Handle" >
+            <button id="button" class="button"> Show Results</button>
+        </div>
+        <br><br><br><br>
+        <h3 id="h_err" class="Heading"></h3>
+    </div>
+
+    <section class="first_chart">
+        <div class="upperCharts">
+            <ul class="languagechart" id="languagechart"></ul>
+            <canvas id="languagepeiChart" class="languagepeiChart" ></canvas>
+        </div>
+        <div>
+            <ul class="verdictChart1" id="verdictChart1"></ul>
+            <canvas id="verdictChart" class="verdictChart" ></canvas>
+        </div>
+
+    </section>
+    
+
+    <section class="Second_chart">
+        <div class="problemRatingChart">
+            <ul id="Problem_rating" class="Problem_Rating_chart"></ul>
+            <canvas id="problemRatingChart" class="problemRatingChart"></canvas>  
+        </div>
+    </section>
+
+    <section class="third_chart">
+        <ul class="tag___" id = "tag___" ></ul>
+        <div class="Tag_Chart">
+            <canvas id="tagChart"></canvas>
+        </div>
+        <div class="Tagchart_">
+            <li id="legend_unordered_list"></li>
+        </div>
+    </section>
+    <section class="Table">
+        <div class="UserTable">
+            <table class="user_table" id="user_table">
+                <tr>
+                    <th id="user_name11"></th>
+                    <th id="user_name1"></th> 
+                </tr>
+            </table>
+        </div>
+        <div class="UserTable">
+            <table class="user_table1" id="user_table1">
+                <tr>
+                    <th id="user_name12"></th>
+                    <th id="user_name"></th>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <section class="others">
+        <div class="Unsolved_problems">
+            <h2 id="Unsolved_prob" class="Unsolved_prob"></h2>
+            <p id="unsolved_count" class="unsolved_count"></p>
+            <p id="unsolved_list" class="unsolved_list"></p>
+        </div>
+    </section>
+
+    <br><br>
+
+    <h3>Developed by <a href="https://www.facebook.com/arshverma.arshverma.50">Arsh Verma</a></h3>
+    <script src="../scripts/analises.js"></script>
+</body>
+</html>
