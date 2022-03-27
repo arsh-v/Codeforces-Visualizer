@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+body{
+    /* text-align: center; */
+    width: 600px;
+    height: 100%;
+    /* background: #d1540c; */
+    background: url('../imgs/back3.png');
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    /* display: flex; */
+    font-family: "Open Sans";
+    /* margin: 20px 10% 0px 10%; */
+}
+
+.upperbody{
+    text-align: center;
+    border-bottom: 2px solid black;
+
+}
+
+.codeforces{
+    text-align: center;
+    font-size: medium;
+    text-transform: capitalize;
+
+}
+.subheading{
+    font-size: 5px;
+    text-align: end;
+    margin: 0;
+    /* margin-top: 2px; */
+}
+.cf1{
+    background: red;
+    border-radius: 5px;
+    text-align: left;
+    border: 2px solid darkred;
+
+}
+.inputcon{
+    justify-content: center;
+    border-bottom: 2px black solid;
+}
+
+.inputhead{
+    text-align: left;
+    text-transform: capitalize;
+    text-decoration: underline;
+    font-family: "Open Sans";
+    font-size: 20px;
+    font-weight: 800;
+
+}
+
+.inputsubhead{
+    text-align: left;
+    font-size: medium;
+    font-weight: 700;
+}
+.inputusername{
+    justify-content: flex-end;
+    height: 25px;
+    width: 20%;
+    border: 1px blue solid;
+    border-radius: 5px;
+    
+}
+
+.button{
+    height: 25px;
+    color: black    ;
+    border: 1px solid blue;
+    border-radius: 5px;
+    font-weight: 600;
+    background: skyblue;
+    display: end;
+
+}
+.button:hover{
+    height: 25px;
+    color: black    ;
+    border: 1px solid blue;
+    border-radius: 5px;
+    font-weight: 600;
+    background: rgb(14, 167, 228);
+    display: end;
+
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    border-radius: 2px;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid black;
+    text-align: left;
+    height: 15px;
+    border-radius: 2px;
+    font-weight: 700;
+    padding: 8px;
+  }
+  th{
+      border-radius: 3px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: skyblue;
+  }
+  .link_page{
+      position: absolute;
+      top: 10px;
+      right: 30px;
+      border: 2px solid black;
+      border-radius: 50%;
+  }
