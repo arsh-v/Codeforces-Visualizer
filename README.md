@@ -69,4 +69,7 @@ I have to build a chrome extension that analyses the coding journey of any user 
 
 ![Screenshot (601)](https://user-images.githubusercontent.com/84044819/161398034-d8fcc92a-9d77-40ff-84f3-7e973268f2fd.png)
 
+## Credits
+I want to thank my teammate in this project.
+- [jash200115](https://github.com/jash200115)
 
