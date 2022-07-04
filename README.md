@@ -73,3 +73,7 @@ I have to build a chrome extension that analyses the coding journey of any user 
 I want to thank my teammate in this project.
 - [jash200115](https://github.com/jash200115)
 
+## 🔗 Links
+
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/arsh-verma/)
+
